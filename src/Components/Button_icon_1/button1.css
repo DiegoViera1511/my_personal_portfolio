@@ -1,0 +1,24 @@
+button{
+    width: 170px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: white;
+    border: 2px solid lightslategrey;
+    text-align: center;
+    text-decoration: lightslategrey ;
+    font-size: large;
+    font-family: monospace;
+    color: lightslategrey;
+    transition: background-color 0.5s ease;
+    padding: 10px;
+}
+
+button:hover{
+    background-color: lightgray;
+    color: white;
+    border:2px solid black;
+}
+
+button i{
+    margin: 5px;
+}
