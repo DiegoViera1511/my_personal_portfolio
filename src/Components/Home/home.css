@@ -37,13 +37,11 @@ div.presentation_container{
     margin: 50px;
 }
 .presentation_name{
-    font-family: monospace;
     font-size: 60px;
     margin: 0;
 }
 .presentation_vocation , .presentation_text{
-    font-family: monospace;
-    color: lightslategrey;
+    color: var(--secondary-font-color);
     margin: 10px;
 }
 

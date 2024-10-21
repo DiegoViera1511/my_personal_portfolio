@@ -16,10 +16,9 @@ nav.nav_container{
 a.nav_logo{
     display: flex;
     text-decoration: none;
-    color: black;
+    color: var(--primary-font-color);
     padding: 1px;
     align-items: center;
-    font-family: monospace;
     font-size: large;
 }
 a.nav_logo img{
@@ -39,8 +38,7 @@ ul.nav_menu_list{
 }
 a.nav_menu_list_item_link {
     text-decoration: none;
-    color: black;
-    font-family: monospace;
+    color: var(--primary-font-color);
     font-size: large;
 }
 a.nav_menu_list_item_link:hover{

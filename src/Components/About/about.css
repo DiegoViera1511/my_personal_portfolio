@@ -9,15 +9,13 @@
     top: 70px;
     margin: 70px;
     text-align: center;
-    font-family: monospace;
     font-size: 50px;
 }
 .section_subtitle{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    font-family: monospace;
-    color: lightslategrey;
+    color: var(--secondary-font-color);
 }
 .about_content{
     display: flex;
@@ -28,8 +26,7 @@
 }
 
 .about_text{
-    font-family: monospace;
-    color: lightslategrey;
+    color: var(--secondary-font-color);
     font-size: large;
     margin: 40px;
 }

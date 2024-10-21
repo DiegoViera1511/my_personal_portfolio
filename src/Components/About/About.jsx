@@ -11,7 +11,7 @@ export function About(){
             <div className="about_content">
                 <Icon_Store />
                 <p className="about_text">
-                    Hello! My name is Diego Manuel Viera Martínez, a computer scientist graduated from the<br/>
+                    My name is Diego Manuel Viera Martínez, a computer scientist graduated from the<br/>
                     University of Havana in Cuba. My native language is Spanish, but I also speak English.<br/>
                     Passionate about full stack web development, artificial intelligence, and game development,<br/>
                     I constantly seek to enhance my skills by learning new technologies. Working on data<br/>
