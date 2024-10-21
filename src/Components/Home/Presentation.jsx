@@ -4,7 +4,7 @@ export function Presentation(){
     return(
         <div className="presentation_container">
             <h1 className="presentation_name">Diego Viera</h1>
-            <h2 className="presentation_vocation">&lt; Computer Scientific /&gt;</h2>
+            <h2 className="presentation_vocation">&lt; Computer Scientist /&gt;</h2>
             <p className="presentation_text">
                 I`m a passionate computer scientist ready to contribute my creativity <br/>
                 to new projects and challenges.

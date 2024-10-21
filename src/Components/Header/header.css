@@ -22,6 +22,11 @@ a.nav_logo{
     font-family: monospace;
     font-size: large;
 }
+a.nav_logo img{
+    margin: 0;
+    width: 50px;
+    height: 50px;
+}
 
 div.nav_menu{
     padding: 1px;
@@ -39,10 +44,6 @@ a.nav_menu_list_item_link {
     font-size: large;
 }
 a.nav_menu_list_item_link:hover{
-    transition: font-weight 1s ease;
-    font-weight: bold;
-}
-a.nav_logo:hover{
     transition: font-weight 1s ease;
     font-weight: bold;
 }

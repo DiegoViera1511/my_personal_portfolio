@@ -7,7 +7,7 @@ export function Home(){
         <section id="home">
             <Social />
             <Presentation />
-            <img className="home_photo" src="src/assets/Images/IMG_2607.JPG" alt="home_img"/>
+            <img className="home_photo" src="src/assets/Images/Viera_photo.JPEG" alt="home_img"/>
         </section>
     )
 }

@@ -1,0 +1,36 @@
+article.icon_store_article{
+    max-width: 60%;
+    mask-image: linear-gradient(to right,
+    transparent 0%,
+    white 30%,
+    white 70%,
+    transparent 100%);
+    margin: 20px;
+    padding: 10px;
+}
+
+section.icon_store_container{
+    min-width: fit-content;
+    display: flex;
+    gap: 20px;
+    animation: scroll_left 20s linear infinite;
+    padding:0 8px ;
+}
+section.icon_store_container:hover{
+    animation-play-state: paused;
+}
+.icon_store_container i{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    margin: 5px;
+    padding: 0;
+    transition: all 0.3s;
+}
+
+@keyframes scroll_left {
+    to{
+        transform: translateX(-50%);
+    }
+}
