@@ -1,0 +1,116 @@
+.icons_mosaic img{
+    height: 60px;
+    width: 60px;
+}
+.icons_mosaic{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 400px;
+    width: 400px;
+}
+.icons_mosaic span{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 400px;
+    height: 100px;
+}
+.M_icon img {
+    height: 80px;
+    width: 80px;
+}
+.M_icon{
+    background-color: rgba(79,79,79,0.25) ;
+    border: grey;
+    height: 90px;
+    width: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+.M_icon:hover {
+    transition: width , height 1s ease;
+    width: 100px;
+    height: 100px;
+    background-color: darkgrey;
+}
+
+.skill_text{
+    display: flex;
+    height: auto;
+    width: auto;
+    align-items: center;
+    justify-content: center;
+}
+.skills_mosaic_container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    margin: 20px;
+}
+
+.skill_text p {
+    position: absolute;
+    max-width: 350px;
+    font-size: 20px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+@media (max-width: 875px){
+    .M_icon img {
+        height: 60px;
+        width: 60px;
+    }
+    .M_icon{
+        background-color: rgba(79,79,79,0.25) ;
+        border: grey;
+        height: 70px;
+        width: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+    }
+    .M_icon:hover {
+        width: 80px;
+        height: 80px;
+    }
+    .skills_mosaic_container{
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: 0;
+    }
+    .skill_text{
+        display: none;
+        height: auto;
+        width: auto;
+        align-items: center;
+        justify-content: center;
+    }
+    .icons_mosaic{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 300px;
+        width: 300px;
+    }
+    .icons_mosaic span{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        width: 300px;
+        height: 100px;
+    }
+}
+
+/*Small devices*/
+@media (max-width: 376px){
+
+}

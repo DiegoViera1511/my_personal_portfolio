@@ -3,7 +3,6 @@ import "./header.css"
 export function Header() {
     return (
         <header className="header">
-            
             <nav className="nav_container">
                 <a href="#home" className="nav_logo">
                     <img src="src/assets/Images/Viera_Logo.png"/>

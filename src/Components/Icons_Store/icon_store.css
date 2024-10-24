@@ -1,4 +1,5 @@
 article.icon_store_article{
+    display: flex;
     max-width: 60%;
     mask-image: linear-gradient(to right,
     transparent 0%,
@@ -7,11 +8,13 @@ article.icon_store_article{
     transparent 100%);
     margin: 20px;
     padding: 10px;
+    overflow-x: hidden;
 }
 
 section.icon_store_container{
     min-width: fit-content;
     display: flex;
+    justify-content: center;
     gap: 20px;
     animation: scroll_left 20s linear infinite;
     padding:0 8px ;

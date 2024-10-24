@@ -1,30 +1,54 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="icon" type="image/svg+xml" href="/vite.svg"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
     <title>Viera's Portfolio</title>
     <style>
-      body {
-        margin: 0 ;
-        padding: 0 ;
-        overflow-x: hidden ;
-        height: 100% ; 
-        font-family: monospace ;
-      }
-      button{
-        font-family: monospace;
-      }
-      html{
-        height: 100%;
-        scroll-behavior: smooth;
-      }
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            height: 100%;
+            font-family: monospace;
+            display: flex;
+        }
+
+        button {
+            font-family: monospace;
+        }
+
+        html {
+            height: 100%;
+            scroll-behavior: smooth;
+        }
+
+        .root {
+            display: flex;
+            flex-direction: row;
+        }
+        @media (max-width: 875px){
+            body{
+                margin-left: 5px;
+                margin-right: 5px;
+            }
+          
+        }
+
+        /*Small devices*/
+        @media (max-width: 376px){
+            body{
+                margin-left: 5px;
+                margin-right: 5px;
+            }
+        }
+
     </style>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+</head>
+<body>
+<div id="root"></div>
+<script type="module" src="/src/main.jsx"></script>
+</body>
 </html>

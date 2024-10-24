@@ -1,0 +1,32 @@
+.skills_section{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+.section_title{
+    margin: 0;
+}
+div.skills_container{
+    width: 100%;
+    height: 30px;
+}
+
+.skills_container img{
+    width: 400px;
+    height: 500px;
+    border-radius: 15%;
+    border: black solid 2px;
+}
+
+@media (max-width: 875px){
+    
+}
+
+/*Small devices*/
+@media (max-width: 376px){
+   
+}
