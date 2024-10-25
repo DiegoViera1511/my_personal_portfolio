@@ -22,7 +22,10 @@
     display: flex;
     color: var(--secondary-font-color);
     font-size: large;
-    margin: 40px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-right: 200px;
+    margin-left: 200px;
     justify-content: center;
 }
 .about_photo{
@@ -76,7 +79,7 @@
         display: flex;
         flex-wrap: wrap;
         color: var(--secondary-font-color);
-        font-size: small;
+        font-size: x-small;
         margin: 10px;
     }
 }

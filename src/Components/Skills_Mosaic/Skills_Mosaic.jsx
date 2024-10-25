@@ -55,7 +55,8 @@ export function Skills_Mosaic() {
     }, [])
     return (
         <div className="skills_mosaic_container">
-            <div className="skill_text">
+           
+                 <div className="skill_text">
                 <p className="text_html">
                     HTML (HyperText Markup Language) is the standard language for creating web pages. Defines the
                     structure and content, using tags.
@@ -81,6 +82,8 @@ export function Skills_Mosaic() {
                     used for system and application development.
                 </p>
             </div>
+           
+            
 
             <div className="icons_mosaic">
                 <span>

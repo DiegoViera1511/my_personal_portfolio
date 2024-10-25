@@ -11,12 +11,13 @@ export function About(){
             <Icon_Store />
             
             <p className="about_text">
-                My name is Diego Manuel Viera Martínez, a computer scientist graduated from the<br/>
-                University of Havana in Cuba. My native language is Spanish, but I also speak English.<br/>
-                Passionate about full stack web development, artificial intelligence, and game development,<br/>
-                I constantly seek to enhance my skills by learning new technologies. Working on data<br/>
-                structures helps improve my efficiency. Creativity is always a focus, and my dream is to<br/>
-                create something that improves everyone’s life.
+                Hello! My name is Diego Manuel Viera Martínez, and I am a Computer Science student passionate about software development and technology. My native language is Spanish, and I am always looking for new opportunities to learn and grow in the programming world.
+                <br/><br/>
+                I am a big fan of Apple and love to explore their technologies and ecosystems. I also have a strong interest in game development, where I can apply my creativity and technical skills. I enjoy participating in collaborative projects, where I can use my knowledge and acquire new skills. I am particularly interested in areas such as artificial intelligence, web development, and systems programming.
+                <br/><br/>
+                My hobbies include creating pixel art and going to the gym to stay healthy and fit. These activities help me stay creative and balanced. I am excited to contribute to open-source projects and collaborate with other technology enthusiasts.
+                <br/><br/>
+                If you have a project in mind or just want to chat about technology, feel free to reach out!
             </p>
             
             <a className="cv_link" href="src/assets/CV_Diego_Viera.pdf" download="CV_Diego_Viera.pdf">
