@@ -5,7 +5,7 @@ export function Header() {
         <header className="header">
             <nav className="nav_container">
                 <a href="#home" className="nav_logo">
-                    <img src="src/assets/Images/Viera_Logo.png"/>
+                    <img src="/Images/Viera_Logo.png"/>
                 </a>
                 
                 <div className="nav_menu">
@@ -35,7 +35,7 @@ export function Header() {
                         </li>
 
                         <li className="nav_menu_list_item">
-                            <a href="src/assets/CV_Diego_Viera.pdf" className="nav_menu_list_item_link" download="CV_Diego_Viera.pdf">
+                            <a href="/CV_Diego_Viera.pdf" className="nav_menu_list_item_link" download="CV_Diego_Viera.pdf">
                                 <i className="nav_menu_list_item_icon"></i> CV
                             </a>
                         </li>

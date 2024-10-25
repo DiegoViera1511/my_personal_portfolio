@@ -23,7 +23,7 @@ export function About(){
                 If you have a project in mind or just want to chat about technology, feel free to reach out!
             </p>
 
-            <a className="cv_link" href="src/assets/CV_Diego_Viera.pdf" download="CV_Diego_Viera.pdf">
+            <a className="cv_link" href="/CV_Diego_Viera.pdf" download="CV_Diego_Viera.pdf">
                 <Button_icon_1  text="Download CV" icon="uil uil-file-alt"/>
             </a>
         </section>

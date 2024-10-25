@@ -19,7 +19,7 @@ export function Contact_Card(){
             </div>
             <div className="card_logo">
                 <span>
-                    <img src="src/assets/Images/Viera_Logo.png" className="logo"/>
+                    <img src="/Images/Viera_Logo.png" className="logo"/>
                 </span>
             </div>
         </div>

@@ -88,46 +88,46 @@ export function Skills_Mosaic() {
             <div className="icons_mosaic">
                 <span>
                     <div className="M_icon selected_c">
-                    <img src="src/assets/Icons/icons8-c-programación-96.png" alt="icon c"/>
+                    <img src="/Icons/icons8-c-programación-96.png" alt="icon c"/>
                 </div>
                 <div className="M_icon selected_cs">
-                    <img src="src/assets/Icons/icons8-c-sharp-logo-2-96.png" alt="icon cs"/>
+                    <img src="/Icons/icons8-c-sharp-logo-2-96.png" alt="icon cs"/>
                 </div>
                 </span>
 
                 <span>
                     <div className="M_icon selected_cpp">
-                    <img src="src/assets/Icons/icons8-logotipo-de-c-plus-plus-96.png" alt="icon cpp"/>
+                    <img src="/Icons/icons8-logotipo-de-c-plus-plus-96.png" alt="icon cpp"/>
                 </div>
                 <div className="M_icon selected_git">
-                    <img src="src/assets/Icons/icons8-git-96.png" alt="icon git"/>
+                    <img src="/Icons/icons8-git-96.png" alt="icon git"/>
                 </div>
                 <div className="M_icon selected_css">
-                    <img src="src/assets/Icons/icons8-css3-96.png" alt="icon css"/>
+                    <img src="/Icons/icons8-css3-96.png" alt="icon css"/>
                 </div>
                 <div className="M_icon selected_html">
-                    <img src="src/assets/Icons/icons8-html-5-96.png" alt="icon html5"/>
+                    <img src="/Icons/icons8-html-5-96.png" alt="icon html5"/>
                 </div>
                 </span>
 
                 <span>
                     <div className="M_icon selected_js">
-                    <img src="src/assets/Icons/icons8-javascript-96.png" alt="icon js"/>
+                    <img src="/Icons/icons8-javascript-96.png" alt="icon js"/>
                 </div>
                 <div className="M_icon selected_mysql">
-                    <img src="src/assets/Icons/icons8-logo-de-mysql-96.png" alt="icon mysql"/>
+                    <img src="/Icons/icons8-logo-de-mysql-96.png" alt="icon mysql"/>
                 </div>
                 <div className="M_icon selected_python">
-                    <img src="src/assets/Icons/icons8-python-96.png" alt="icon python"/>
+                    <img src="/Icons/icons8-python-96.png" alt="icon python"/>
                 </div>
                 </span>
 
                 <span>
                     <div className="M_icon selected_react">
-                    <img src="src/assets/Icons/icons8-reaccionar-nativo-96.png" alt="icon react"/>
+                    <img src="/Icons/icons8-reaccionar-nativo-96.png" alt="icon react"/>
                 </div>
                 <div className="M_icon selected_tailwind">
-                    <img src="src/assets/Icons/icons8-viento-de-cola-css-96.png" alt="icon tailwind"/>
+                    <img src="/Icons/icons8-viento-de-cola-css-96.png" alt="icon tailwind"/>
                 </div>
                 </span>
             </div>
