@@ -14,7 +14,7 @@ export function Contact_Card(){
                 </span>
                 <span>
                     <i className="uil uil-telegram-alt social_icon"></i>
-                    <a href="t.me/viera1511" target="_blank">@viera1511</a>
+                    <a href="https://t.me/viera1511" target="_blank">@viera1511</a>
                 </span>
             </div>
             <div className="card_logo">
