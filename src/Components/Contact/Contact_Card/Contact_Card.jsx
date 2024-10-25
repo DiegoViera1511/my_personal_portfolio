@@ -4,6 +4,7 @@ export function Contact_Card(){
     return (
         <div className="contact_card">
             <div className="contact_social">
+                
                 <span>
                     <i className="uil uil-envelope-alt social_icon"></i>
                     <a href="mailto:diegovieramartinez@gmail.com" target="_blank"> diegovieramartinez@gmail.com</a>
