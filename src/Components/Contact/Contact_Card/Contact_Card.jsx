@@ -6,15 +6,15 @@ export function Contact_Card(){
             <div className="contact_social">
                 <span>
                     <i className="uil uil-envelope-alt social_icon"></i>
-                    <a href="mailto:diegovieramartinez@gmail.com"> diegovieramartinez@gmail.com</a>
+                    <a href="mailto:diegovieramartinez@gmail.com" target="_blank"> diegovieramartinez@gmail.com</a>
                 </span>
                 <span>
                     <i className="uil uil-whatsapp social_icon"></i>
-                    <a href="https://wa.me/5354714256">+53 54714256</a>
+                    <a href="https://wa.me/5354714256" target="_blank">+53 54714256</a>
                 </span>
                 <span>
                     <i className="uil uil-telegram-alt social_icon"></i>
-                    <a href="t.me/viera1511">@viera1511</a>
+                    <a href="t.me/viera1511" target="_blank">@viera1511</a>
                 </span>
             </div>
             <div className="card_logo">

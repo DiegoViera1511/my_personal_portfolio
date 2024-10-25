@@ -12,4 +12,6 @@ main{
 :root{
     --primary-font-color:  black;
     --secondary-font-color: lightslategrey;
+    --alice-blue-color: #F0F8FF;
+    --snow-color:#FAFDFF;
 }

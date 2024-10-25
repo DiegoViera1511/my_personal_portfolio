@@ -9,17 +9,20 @@ export function About(){
             <h2 className="section_subtitle">&lt; My Introduction /&gt;</h2>
             
             <Icon_Store />
-            
+
             <p className="about_text">
-                Hello! My name is Diego Manuel Viera Martínez, and I am a Computer Science student passionate about software development and technology. My native language is Spanish, and I am always looking for new opportunities to learn and grow in the programming world.
+                My name is Diego Manuel Viera Martinez, and I am a Computer Science. I studied at the
+                University of Havana, where I developed a solid foundation in various aspects of computing.
+                My native language is Spanish, but I am also proficient in English, which enables me to engage with a
+                wider community in the tech field.
                 <br/><br/>
-                I am a big fan of Apple and love to explore their technologies and ecosystems. I also have a strong interest in game development, where I can apply my creativity and technical skills. I enjoy participating in collaborative projects, where I can use my knowledge and acquire new skills. I am particularly interested in areas such as artificial intelligence, web development, and systems programming.
-                <br/><br/>
-                My hobbies include creating pixel art and going to the gym to stay healthy and fit. These activities help me stay creative and balanced. I am excited to contribute to open-source projects and collaborate with other technology enthusiasts.
+                I am interested in Full Stack web development, mobile application, artificial
+                intelligence, and video games development. I am passionate about learning new technologies and tools that
+                enhance my productivity, as well as exploring data structures that improve my programming skills.
                 <br/><br/>
                 If you have a project in mind or just want to chat about technology, feel free to reach out!
             </p>
-            
+
             <a className="cv_link" href="src/assets/CV_Diego_Viera.pdf" download="CV_Diego_Viera.pdf">
                 <Button_icon_1  text="Download CV" icon="uil uil-file-alt"/>
             </a>

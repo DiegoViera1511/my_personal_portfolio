@@ -12,7 +12,8 @@
 }
 
 .footer{
-    background-color: lightgray;
+    background-color: white;
+    border-top: lightgray 1px solid;
 }
 
 .footer_container a{

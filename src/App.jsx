@@ -8,7 +8,6 @@ import {Footer} from "./Components/Footer/Footer.jsx";
 function App() {
   return (
       <>
-
           <Header />
           <main className="main">
               <Home />
@@ -17,7 +16,6 @@ function App() {
               <Contact />
               <Footer />
           </main>
-         
       </>
   ) 
 }
