@@ -10,4 +10,11 @@
 .section_title{
     margin: 0;
 }
-
+@media(max-width: 875px) {
+    .section_title{
+        font-size: xx-large;
+    }
+    .section_subtitle{
+        font-size: large;
+    }
+}

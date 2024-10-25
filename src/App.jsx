@@ -4,6 +4,7 @@ import {About} from "./Components/About/About.jsx";
 import "./App.css"
 import {Skills} from "./Components/Skills/Skills.jsx";
 import {Contact} from "./Components/Contact/Contact.jsx";
+import {Footer} from "./Components/Footer/Footer.jsx";
 function App() {
   return (
       <>
@@ -14,12 +15,7 @@ function App() {
               <About />
               <Skills />
               <Contact />
-              {/*
-                 
-               
-              */}
-              
-               
+              <Footer />
           </main>
          
       </>
