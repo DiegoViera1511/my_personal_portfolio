@@ -82,13 +82,11 @@ export function Skills_Mosaic() {
                     used for system and application development.
                 </p>
             </div>
-           
             
-
             <div className="icons_mosaic">
                 <span>
                     <div className="M_icon selected_c">
-                    <img src="/Icons/icons8-c-programación-96.png" alt="icon c"/>
+                    <img src="/Icons/icons8-c-programing-96.png" alt="icon c"/>
                 </div>
                 <div className="M_icon selected_cs">
                     <img src="/Icons/icons8-c-sharp-logo-2-96.png" alt="icon cs"/>
