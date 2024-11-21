@@ -1,4 +1,4 @@
-.skills_section{
+.skills_section {
     width: 100%;
     height: 100%;
     display: flex;
@@ -7,26 +7,28 @@
     justify-content: center;
     gap: 5px;
 }
-.section_title{
+
+.section_title {
     margin: 0;
 }
-div.skills_container{
+
+div.skills_container {
     width: 100%;
     height: 30px;
 }
 
-.skills_container img{
+.skills_container img {
     width: 400px;
     height: 500px;
     border-radius: 15%;
     border: black solid 2px;
 }
 
-@media (max-width: 875px){
-    
+@media (max-width: 875px) {
+
 }
 
 /*Small devices*/
-@media (max-width: 376px){
-   
+@media (max-width: 376px) {
+
 }

@@ -4,16 +4,17 @@ import {About} from "../About/About.jsx";
 import {Skills} from "../Skills/Skills.jsx";
 import {Contact} from "../Contact/Contact.jsx";
 import {Footer} from "../Footer/Footer.jsx";
+
 function Portfolio() {
     return (
         <>
-            <Header />
+            <Header/>
             <main className="main">
-                <Home />
-                <About />
-                <Skills />
-                <Contact />
-                <Footer />
+                <Home/>
+                <About/>
+                <Skills/>
+                <Contact/>
+                <Footer/>
             </main>
         </>
     )

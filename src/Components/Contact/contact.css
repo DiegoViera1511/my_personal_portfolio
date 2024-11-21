@@ -1,4 +1,4 @@
-.contact_section{
+.contact_section {
     width: 100%;
     height: 100%;
     display: flex;
@@ -7,14 +7,17 @@
     justify-content: center;
     gap: 20px;
 }
-.section_title{
+
+.section_title {
     margin: 0;
 }
-@media(max-width: 875px) {
-    .section_title{
+
+@media (max-width: 875px) {
+    .section_title {
         font-size: xx-large;
     }
-    .section_subtitle{
+
+    .section_subtitle {
         font-size: large;
     }
 }

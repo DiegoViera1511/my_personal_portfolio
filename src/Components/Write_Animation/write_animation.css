@@ -1,13 +1,14 @@
-.write_animation_container{
+.write_animation_container {
     height: fit-content;
     width: 190px;
-    border-left: black solid 3px;  
-    background-color: rgba(52,52,52,0.24);
+    border-left: black solid 3px;
+    background-color: rgba(52, 52, 52, 0.24);
     margin: 30px;
     padding: 5px;
 }
-.animation_text{
-    display: block; 
+
+.animation_text {
+    display: block;
     font-family: monospace;
     border-right: black solid 2px;
     white-space: nowrap;
@@ -16,9 +17,13 @@
 }
 
 @keyframes typing {
-    from{width: 0}
+    from {
+        width: 0
+    }
 }
 
 @keyframes blink {
-    50% {border-color: transparent}
+    50% {
+        border-color: transparent
+    }
 }

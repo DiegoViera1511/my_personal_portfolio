@@ -1,7 +1,8 @@
 import "./home.css"
 import {Button_icon_1} from "../Button_icon_1/Button_icon_1.jsx";
-export function Presentation(){
-    return(
+
+export function Presentation() {
+    return (
         <div className="presentation_container">
             <h1 className="presentation_name">Diego Viera</h1>
             <h2 className="presentation_vocation">&lt; Computer Scientist /&gt;</h2>

@@ -2,25 +2,37 @@ import "./skills_mosaic.css"
 import {useEffect} from "react";
 
 export function Skills_Mosaic() {
-    useEffect(()=>{
-        function HandleHover (target){
+    useEffect(() => {
+        function HandleHover(target) {
             target.style.opacity = "1";
         }
-        function HandleOut(target){
+
+        function HandleOut(target) {
             target.style.opacity = "0";
         }
-        function AddEvents(Elements_list){
-            for (let i = 0 ; i < Elements_list.length - 1; i+=2) {
-                Elements_list[i].addEventListener("mouseover", () => {HandleHover(Elements_list[i+1])});
-                Elements_list[i].addEventListener("mouseout" , () => {HandleOut(Elements_list[i+1])});
+
+        function AddEvents(Elements_list) {
+            for (let i = 0; i < Elements_list.length - 1; i += 2) {
+                Elements_list[i].addEventListener("mouseover", () => {
+                    HandleHover(Elements_list[i + 1])
+                });
+                Elements_list[i].addEventListener("mouseout", () => {
+                    HandleOut(Elements_list[i + 1])
+                });
             }
         }
-        function RemoveEvents(Elements_list){
-            for (let i = 0 ; i < Elements_list.length - 1; i++) {
-                Elements_list[i].removeEventListener("mouseover", () => {HandleHover(Elements_list[i+1])});
-                Elements_list[i].removeEventListener("mouseout" , () => {HandleOut(Elements_list[i+1])});
+
+        function RemoveEvents(Elements_list) {
+            for (let i = 0; i < Elements_list.length - 1; i++) {
+                Elements_list[i].removeEventListener("mouseover", () => {
+                    HandleHover(Elements_list[i + 1])
+                });
+                Elements_list[i].removeEventListener("mouseout", () => {
+                    HandleOut(Elements_list[i + 1])
+                });
             }
         }
+
         const htmlHover = document.querySelector(".selected_html")
         const htmlTarget = document.querySelector(".text_html")
         const cssHover = document.querySelector(".selected_css")
@@ -43,20 +55,20 @@ export function Skills_Mosaic() {
         const mysqlTarget = document.querySelector(".text_mysql")
         const gitHover = document.querySelector(".selected_git")
         const gitTarget = document.querySelector(".text_git")
-        const Mosaic_Element = [htmlHover,htmlTarget,cssHover,cssTarget,javascriptHover,javascriptTarget,
-        cHover,cTarget,csHover,csTarget,cppHover,cppTarget,reactHover,reactTarget,tailwindHover,tailwindTarget,
-        pythonHover,pythonTarget,mysqlHover,mysqlTarget,gitHover,gitTarget]
-        
+        const Mosaic_Element = [htmlHover, htmlTarget, cssHover, cssTarget, javascriptHover, javascriptTarget,
+            cHover, cTarget, csHover, csTarget, cppHover, cppTarget, reactHover, reactTarget, tailwindHover, tailwindTarget,
+            pythonHover, pythonTarget, mysqlHover, mysqlTarget, gitHover, gitTarget]
+
         AddEvents(Mosaic_Element)
-        
+
         return () => {
             RemoveEvents(Mosaic_Element)
         }
     }, [])
     return (
         <div className="skills_mosaic_container">
-           
-                 <div className="skill_text">
+
+            <div className="skill_text">
                 <p className="text_html">
                     HTML (HyperText Markup Language) is the standard language for creating web pages. Defines the
                     structure and content, using tags.
@@ -82,7 +94,7 @@ export function Skills_Mosaic() {
                     used for system and application development.
                 </p>
             </div>
-            
+
             <div className="icons_mosaic">
                 <span>
                     <div className="M_icon selected_c">

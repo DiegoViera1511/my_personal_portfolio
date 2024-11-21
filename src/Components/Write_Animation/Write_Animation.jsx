@@ -1,11 +1,13 @@
 import "./write_animation.css"
 
-export function Write_Animation({text}){
+export function Write_Animation({text}) {
     const l = text.length + 1
-    function hello(){
+
+    function hello() {
         console.log()
     }
-    return(
+
+    return (
         <div className="write_animation_container">
             <p className="animation_text" style={{
                 width: `${l}ch`,

@@ -1,6 +1,6 @@
 import "./contact_card.css"
 
-export function Contact_Card(){
+export function Contact_Card() {
     return (
         <div className="contact_card">
             <div className="contact_social">

@@ -1,4 +1,4 @@
-article.icon_store_article{
+article.icon_store_article {
     display: flex;
     max-width: 60%;
     mask-image: linear-gradient(to right,
@@ -11,18 +11,20 @@ article.icon_store_article{
     overflow-x: hidden;
 }
 
-section.icon_store_container{
+section.icon_store_container {
     min-width: fit-content;
     display: flex;
     justify-content: center;
     gap: 20px;
     animation: scroll_left 20s linear infinite;
-    padding:0 8px ;
+    padding: 0 8px;
 }
-section.icon_store_container:hover{
+
+section.icon_store_container:hover {
     animation-play-state: paused;
 }
-.icon_store_container i{
+
+.icon_store_container i {
     display: grid;
     justify-content: center;
     align-items: center;
@@ -33,7 +35,7 @@ section.icon_store_container:hover{
 }
 
 @keyframes scroll_left {
-    to{
+    to {
         transform: translateX(-50%);
     }
 }

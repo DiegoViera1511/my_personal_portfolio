@@ -1,7 +1,7 @@
 import "./icon_store.css"
 
-export function Icon_Store(){
-    return(
+export function Icon_Store() {
+    return (
         <article className="icon_store_article">
             <section className="icon_store_container">
                 <i className="uil uil-apple-alt"></i>

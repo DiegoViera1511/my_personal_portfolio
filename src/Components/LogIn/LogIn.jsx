@@ -1,56 +1,109 @@
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import "./logIn.css"
 import {Button_icon_1} from "../Button_icon_1/Button_icon_1.jsx";
-import {Link} from "react-router-dom";
-import {Navigate} from "react-router-dom";
+import {Link, Navigate} from "react-router-dom";
+import {Input_1} from "../Input_1/Input.jsx";
+
+export function LogIn() {
+
+    const [username, setUsername] = useState('')
+    const [password, setPassword] = useState('')
+    const [redirect, setRedirect] = useState(false)
 
 
-export function LogIn(){
-    
-    const [username , setUsername] = useState('')
-    const [password , setPassword] = useState('')
-    
+    useEffect(() => {
+        const fetchToken = async () => {
+            const token = localStorage.getItem('jwt')
+            console.log(token)
+            if (token) {
+                const response = await fetch(
+                    'https://portfoliobackend-production-a536.up.railway.app/api/protected', {
+                    method: 'GET',
+                    headers: {
+                        Authorization: `Bearer ${token}`
+                    },
+                })
+                if (response.status === 200) {
+                    setRedirect(true)
+                }
+            }
+        }
+        fetchToken()
+    }, [])
+
+    const handleSubmit = async (e) => {
+        e.preventDefault()
+        const userData = {name: username, password: password}
+        try {
+            const response = await fetch(
+                'https://portfoliobackend-production-a536.up.railway.app/api/logIn', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(userData)
+            });
+            console.log(`response status ${response.status}`)
+            if (response.status === 200) {
+                alert("Welcome back ! ")
+                const {token: tokenResponse} = await response.json()
+                localStorage.setItem('jwt', tokenResponse)
+                setRedirect(true)
+            } else if (response.status === 401) {
+                alert("Invalid user name or password")
+            } else {
+                const {message} = await response.json();
+                console.error(message)
+            }
+        } catch (error) {
+            console.error('Error creating user: ', error)
+        }
+    }
+    if (redirect) {
+        return <Navigate to={"/portfolio"}/>
+    }
+
     return (
         <section id="logIn">
             <h1>Viera`s Portfolio</h1>
             <div className="logIn_div">
-                <form className="logIn_form">
+                <form className="logIn_form" onSubmit={handleSubmit}>
                     <h1>Welcome !</h1>
 
                     <div>
                         <label form="login_user">&lt; User /&gt;</label>
                         <br/>
                         <br/>
-                        <input
-                            id="login_user"
-                            type="text"
-                            value={username}
-                            onChange={(e) => {
+                        <Input_1
+                            input_id="login_user"
+                            input_type="text"
+                            input_value={username}
+                            input_onChange={(e) => {
                                 setUsername(e.target.value)
                             }}
-                            required={true}
-                            placeholder="User name"
+                            input_required={true}
+                            input_placeholder="User name"
                         />
                     </div>
                     <div>
                         <label form="login_password">&lt; Password /&gt;</label>
                         <br/>
                         <br/>
-                        <input
-                            id="login_password"
-                            type="password"
-                            value={password}
-                            onChange={(e) => {
+                        <Input_1
+                            input_id="login_password"
+                            input_type="password"
+                            input_value={password}
+                            input_onChange={(e) => {
                                 setPassword(e.target.value)
                             }}
-                            required={true}
-                            placeholder="Password"
+                            input_required={true}
+                            input_placeholder="Password"
                         />
                     </div>
 
                     <Button_icon_1 text="Sign in " icon="uil uil-signin" type="submit"></Button_icon_1>
-                    
-                    <Link to="/register"><Button_icon_1 text="Register here !" /></Link>
+
+                    <Link to="/register"><Button_icon_1 text="Register here !"/></Link>
                 </form>
             </div>
 

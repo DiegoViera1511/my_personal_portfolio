@@ -1,4 +1,4 @@
-.header{
+.header {
     width: 100%;
     position: fixed;
     top: 0;
@@ -8,12 +8,12 @@
     border-bottom: lightgrey 1px solid;
 }
 
-nav.nav_container{
+nav.nav_container {
     display: grid;
     grid-template-columns: 1fr 2fr;
 }
 
-a.nav_logo{
+a.nav_logo {
     display: flex;
     justify-content: center;
     text-decoration: none;
@@ -22,52 +22,68 @@ a.nav_logo{
     align-items: center;
     font-size: large;
 }
-a.nav_logo img{
+
+a.nav_logo img {
     margin: 0;
     width: 50px;
     height: 50px;
 }
 
-div.nav_menu{
+div.nav_menu {
     display: flex;
     justify-content: center;
     padding: 1px;
 }
 
-ul.nav_menu_list{
+ul.nav_menu_list {
     display: grid;
-    grid-template-columns: repeat(5,1fr);
+    grid-template-columns: repeat(5, 1fr);
     column-gap: 50px;
     list-style-type: none;
 }
+
 a.nav_menu_list_item_link {
     text-decoration: none;
     color: var(--primary-font-color);
     font-size: large;
 }
-a.nav_menu_list_item_link:hover{
+
+a.nav_menu_list_item_link:hover {
+    transition: font-weight 1s ease;
+    font-weight: bold;
+}
+
+.log_out_button {
+    background-color: white;
+    border: none;
+    font-size: large;
+}
+
+.log_out_button:hover {
     transition: font-weight 1s ease;
     font-weight: bold;
 }
 
 /*Medium devices*/
-@media(max-width: 875px) {
-    .header{
+@media (max-width: 875px) {
+    .header {
         display: flex;
         position: fixed;
         top: 0;
         z-index: 1;
     }
 
-    nav.nav_container{
+    nav.nav_container {
         width: 100%;
         display: grid;
         grid-template-columns: 0fr  2fr;
     }
-    a.nav_logo img{
+
+    a.nav_logo img {
         display: none;
     }
-    ul.nav_menu_list{
+
+    ul.nav_menu_list {
         display: flex;
         flex-direction: row;
         align-items: center;
