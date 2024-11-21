@@ -55,6 +55,7 @@ a.nav_menu_list_item_link:hover {
 
 .log_out_button {
     background-color: white;
+    color: black;
     border: none;
     font-size: large;
     outline: none;
