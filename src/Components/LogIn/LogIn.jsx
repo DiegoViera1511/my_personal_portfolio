@@ -32,7 +32,7 @@ export function LogIn() {
                 }
             }
         }
-        fetchToken()
+        fetchToken().then()
     }, [])
 
     const handleSubmit = async (e) => {
@@ -119,7 +119,7 @@ export function LogIn() {
                         />
                     </div>
 
-                    <Button_icon_1 text="Sign in " icon="uil uil-signin" type="submit"></Button_icon_1>
+                    <Button_icon_1 text="Sign in " icon="uil uil-signin" type="submit" />
 
                     <Link to="/register"><Button_icon_1 text="Register here !"/></Link>
                 </form>

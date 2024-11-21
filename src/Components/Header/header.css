@@ -57,6 +57,7 @@ a.nav_menu_list_item_link:hover {
     background-color: white;
     border: none;
     font-size: large;
+    outline: none;
 }
 
 .log_out_button:hover {
@@ -90,5 +91,13 @@ a.nav_menu_list_item_link:hover {
         gap: 20px;
         padding: 0;
         list-style-type: none;
+    }
+    
+    a.nav_menu_list_item_link {
+        font-size: medium;
+    }
+
+    .log_out_button {
+        font-size: medium;
     }
 }
