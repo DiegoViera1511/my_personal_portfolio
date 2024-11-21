@@ -3,12 +3,16 @@ import "./logIn.css"
 import {Button_icon_1} from "../Button_icon_1/Button_icon_1.jsx";
 import {Link, Navigate} from "react-router-dom";
 import {Input_1} from "../Input_1/Input.jsx";
+import {Message_container} from "../Message_container/Message_container.jsx";
 
 export function LogIn() {
 
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
     const [redirect, setRedirect] = useState(false)
+    const [showMessage , setShowMessage] = useState(false)
+    const [textMessage , setTextMessage] = useState('')
+    const [typeMessage , setTypeMessage] = useState('')
 
 
     useEffect(() => {
@@ -45,12 +49,23 @@ export function LogIn() {
             });
             console.log(`response status ${response.status}`)
             if (response.status === 200) {
-                alert("Welcome back ! ")
                 const {token: tokenResponse} = await response.json()
                 localStorage.setItem('jwt', tokenResponse)
-                setRedirect(true)
+                setTextMessage("Success !")
+                setShowMessage(true)
+                setTypeMessage("success_message")
+                setTimeout(() => {
+                    setShowMessage(false)
+                    setRedirect(true)
+                },2000)
+                
             } else if (response.status === 401) {
-                alert("Invalid user name or password")
+                setTextMessage("Invalid user name or password")
+                setShowMessage(true)
+                setTypeMessage("failure_message")
+                setTimeout(() => {
+                    setShowMessage(false)
+                },2000)
             } else {
                 const {message} = await response.json();
                 console.error(message)
@@ -69,7 +84,10 @@ export function LogIn() {
             <div className="logIn_div">
                 <form className="logIn_form" onSubmit={handleSubmit}>
                     <h1>Welcome !</h1>
-
+                    <Message_container
+                        message_text={textMessage}
+                        message_type={typeMessage}
+                        show_message={showMessage}/>
                     <div>
                         <label form="login_user">&lt; User /&gt;</label>
                         <br/>

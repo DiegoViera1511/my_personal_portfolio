@@ -1,0 +1,42 @@
+.message_container{
+    position: fixed;
+    top: -100px;
+    left: 50%;
+    padding: 20px 40px 20px 40px;
+    border-radius: 5px;
+    transform: translateX(-50%);
+    transition: top 1s;
+}
+
+.success_message{
+    background-color: lightgreen;
+}
+.failure_message{
+    background-color: lightcoral;
+}
+
+.message_container.show {
+    animation: slideDown 1s forwards;
+}
+
+.message_container.hide {
+    animation: slideUp 1s forwards;
+}
+
+@keyframes slideDown {
+    from {
+        top: -100px;
+    }
+    to {
+        top: 10px;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        top: 10px;
+    }
+    to {
+        top: -100px;
+    }
+}

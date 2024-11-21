@@ -14,3 +14,9 @@
     transition: background-color 0.5s ease;
 }
 
+@media (max-width: 400px) {
+    .input_1 {
+        font-size: medium;
+    }
+}
+

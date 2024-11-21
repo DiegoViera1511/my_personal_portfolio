@@ -3,6 +3,7 @@ import "./register.css"
 import {Button_icon_1} from "../Button_icon_1/Button_icon_1.jsx";
 import {Link, Navigate} from "react-router-dom";
 import {Input_1} from "../Input_1/Input.jsx";
+import {Message_container} from "../Message_container/Message_container.jsx";
 
 
 export function Register() {
@@ -11,6 +12,9 @@ export function Register() {
     const [password, setPassword] = useState('')
     const [confirmation, setConfirmation] = useState('')
     const [redirect, setRedirect] = useState(false)
+    const [showMessage , setShowMessage] = useState(false)
+    const [textMessage , setTextMessage] = useState('')
+    const [typeMessage , setTypeMessage] = useState('')
 
     const handleSubmit = async (e) => {
         e.preventDefault()
@@ -18,7 +22,12 @@ export function Register() {
 
         try {
             if (password !== confirmation) {
-                alert("Password doesn't match")
+                setTextMessage("Password doesn't match")
+                setShowMessage(true)
+                setTypeMessage("failure_message")
+                setTimeout(() => {
+                    setShowMessage(false)
+                },3000)
                 return
             }
             const response = await fetch(
@@ -30,10 +39,20 @@ export function Register() {
                 body: JSON.stringify(userData)
             });
             if (response.status === 201) {
-                alert("User Registered")
-                setRedirect(true)
+                setTextMessage("User Registered")
+                setShowMessage(true)
+                setTypeMessage("success_message")
+                setTimeout(() => {
+                    setShowMessage(false)
+                    setRedirect(true)
+                },2000)
             } else if (response.status === 400) {
-                alert("User already exist")
+                setTextMessage("User already exist")
+                setShowMessage(true)
+                setTypeMessage("failure_message")
+                setTimeout(() => {
+                    setShowMessage(false)
+                },3000)
             } else {
                 const {message} = await response.json();
                 console.error(message)
@@ -53,6 +72,10 @@ export function Register() {
             <div className="register_div">
                 <form className="register_form" onSubmit={handleSubmit}>
                     <h1>New Account !</h1>
+                    <Message_container
+                        message_text={textMessage}
+                        message_type={typeMessage}
+                        show_message={showMessage}/>
                     <div>
                         <label form="register_username">&lt; User /&gt;</label>
                         <br/>
