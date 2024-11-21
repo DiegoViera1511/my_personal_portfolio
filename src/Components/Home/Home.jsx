@@ -1,4 +1,3 @@
-
 import "./home.css"
 import {Social} from "./Social.jsx";
 import {Presentation} from "./Presentation.jsx";

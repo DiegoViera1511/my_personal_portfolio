@@ -1,22 +1,21 @@
-import {Header} from "./Components/Header/Header.jsx";
-import {Home} from "./Components/Home/Home.jsx";
-import {About} from "./Components/About/About.jsx";
 import "./App.css"
-import {Skills} from "./Components/Skills/Skills.jsx";
-import {Contact} from "./Components/Contact/Contact.jsx";
-import {Footer} from "./Components/Footer/Footer.jsx";
+import Portfolio from "./Components/Portfolio/Portfolio.jsx";
+import {BrowserRouter , Route , Routes} from "react-router-dom";
+import {LogIn} from "./Components/LogIn/LogIn.jsx";
+import {Register} from "./Components/Register/Register.jsx";
 function App() {
   return (
-      <>
-          <Header />
-          <main className="main">
-              <Home />
-              <About />
-              <Skills />
-              <Contact />
-              <Footer />
-          </main>
-      </>
+      <BrowserRouter>
+          <Routes>
+              <Route index element={<LogIn/>}/>
+
+              <Route path='/logIn' element={<LogIn/>}/>
+
+              <Route path='/register' element={<Register/>}/>
+
+              <Route path='/portfolio' element={<Portfolio/>}/>
+          </Routes>
+      </BrowserRouter>
   ) 
 }
 
