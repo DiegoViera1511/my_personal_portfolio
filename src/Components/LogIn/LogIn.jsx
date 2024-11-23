@@ -40,7 +40,7 @@ export function LogIn() {
         const userData = {name: username, password: password}
         try {
             const response = await fetch(
-                'https://backendprotfolio-production.up.railway.app/api/logIn', {
+                'https://backendprotfolio-production.up.railway.app/api/users/logIn', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
