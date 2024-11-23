@@ -31,7 +31,7 @@ export function Register() {
                 return
             }
             const response = await fetch(
-                'https://backendprotfolio-production.up.railway.app/api/users', {
+                'http://backendprotfolio-production.up.railway.app/api/users', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
