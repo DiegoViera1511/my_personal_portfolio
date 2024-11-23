@@ -21,7 +21,7 @@ export function LogIn() {
             console.log(token)
             if (token) {
                 const response = await fetch(
-                    'http://backendprotfolio-production.up.railway.app/api/protected', {
+                    'https://backendprotfolio-production.up.railway.app/api/protected', {
                     method: 'GET',
                     headers: {
                         Authorization: `Bearer ${token}`
@@ -40,7 +40,7 @@ export function LogIn() {
         const userData = {name: username, password: password}
         try {
             const response = await fetch(
-                'http://backendprotfolio-production.up.railway.app/api/logIn', {
+                'https://backendprotfolio-production.up.railway.app/api/logIn', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
