@@ -21,7 +21,7 @@ export function LogIn() {
             console.log(token)
             if (token) {
                 const response = await fetch(
-                    'https://portfoliobackend-production-a536.up.railway.app/api/protected', {
+                    'https://backendprotfolio-production.up.railway.app/api/protected', {
                     method: 'GET',
                     headers: {
                         Authorization: `Bearer ${token}`
@@ -40,7 +40,7 @@ export function LogIn() {
         const userData = {name: username, password: password}
         try {
             const response = await fetch(
-                'https://portfoliobackend-production-a536.up.railway.app/api/logIn', {
+                'https://backendprotfolio-production.up.railway.app/api/logIn', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -59,7 +59,7 @@ export function LogIn() {
                     setRedirect(true)
                 },2000)
                 
-            } else if (response.status === 401) {
+            } else if (response.status === 404) {
                 setTextMessage("Invalid user name or password")
                 setShowMessage(true)
                 setTypeMessage("failure_message")
