@@ -27,7 +27,7 @@ export function Register() {
                 setTypeMessage("failure_message")
                 setTimeout(() => {
                     setShowMessage(false)
-                },3000)
+                },2000)
                 return
             }
             const response = await fetch(
@@ -52,7 +52,7 @@ export function Register() {
                 setTypeMessage("failure_message")
                 setTimeout(() => {
                     setShowMessage(false)
-                },3000)
+                },2000)
             } else {
                 const {message} = await response.json();
                 console.error(message)

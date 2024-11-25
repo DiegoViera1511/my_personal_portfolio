@@ -1,9 +1,10 @@
-import {useEffect, useState} from "react";
+import {useContext, useEffect, useState} from "react";
 import "./logIn.css"
 import {Button_icon_1} from "../Button_icon_1/Button_icon_1.jsx";
 import {Link, Navigate} from "react-router-dom";
 import {Input_1} from "../Input_1/Input.jsx";
 import {Message_container} from "../Message_container/Message_container.jsx";
+import {AuthContext} from "../../context/authContext.jsx";
 
 export function LogIn() {
 
@@ -13,8 +14,8 @@ export function LogIn() {
     const [showMessage , setShowMessage] = useState(false)
     const [textMessage , setTextMessage] = useState('')
     const [typeMessage , setTypeMessage] = useState('')
-
-
+    const {setIsAuth} = useContext(AuthContext)
+    
     useEffect(() => {
         const fetchToken = async () => {
             const token = localStorage.getItem('jwt')
@@ -29,6 +30,7 @@ export function LogIn() {
                 })
                 if (response.status === 200) {
                     setRedirect(true)
+                    setIsAuth(true)
                 }
             }
         }
@@ -57,8 +59,9 @@ export function LogIn() {
                 setTimeout(() => {
                     setShowMessage(false)
                     setRedirect(true)
+                    setIsAuth(true)
                 },2000)
-            } else if (response.status === 404) {
+            } else if (response.status === 404 || response.status === 400) {
                 setTextMessage("Invalid user name or password")
                 setShowMessage(true)
                 setTypeMessage("failure_message")

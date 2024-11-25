@@ -1,11 +1,17 @@
 import "./footer.css"
+import {Button_icon_1} from "../Button_icon_1/Button_icon_1.jsx";
+import {useContext} from "react";
+import {AuthContext} from "../../context/authContext.jsx";
+import {Link} from "react-router-dom";
 
 export function Footer() {
+    const {isAuth , showHome} = useContext(AuthContext)
     return (
         <footer className="footer">
             <div className="footer_container">
                 <h1 className="footer_title">Viera</h1>
-                <a href="#home">Home <i className="uil uil-arrow-up"></i></a>
+                {isAuth && <Link to="/config"><Button_icon_1 text={"Settings"} icon={"uil uil-setting"} /></Link>}
+                {showHome && <a href="#home">Home <i className="uil uil-arrow-up"></i></a>}
                 <span className="footer_social">
                     <a href="www.linkedin.com/in/diego-manuel-viera-martínez-1b35a32b6" target="_blank">
                          <img src="/Icons/linkedin.svg" alt="linkeddin_icon"/>

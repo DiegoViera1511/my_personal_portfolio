@@ -37,6 +37,8 @@ div.nav_menu {
 
 ul.nav_menu_list {
     display: grid;
+    align-items: center;
+    justify-content: center;
     grid-template-columns: repeat(5, 1fr);
     column-gap: 50px;
     list-style-type: none;
