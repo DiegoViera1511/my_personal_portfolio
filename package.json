@@ -4,8 +4,6 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "start": "concurrently \"npm run dev:back\" \"npm run dev:front\"",
-    "dev:back": "node --watch Backend/index.js",
     "dev:front": "vite",
     "build": "vite build",
     "lint": "eslint .",
