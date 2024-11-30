@@ -6,18 +6,20 @@ import {Contact} from "../Contact/Contact.jsx";
 import {Footer} from "../Footer/Footer.jsx";
 import {useContext} from "react";
 import {AuthContext} from "../../context/authContext.jsx";
-import {Button_icon_1} from "../Button_icon_1/Button_icon_1.jsx";
+import {Fix_button1} from "../Fix_Button1/Fix_button1.jsx";
+import {Link} from "react-router-dom";
 function Portfolio() {
-    const {showHome , showAbout , showSkills , showContact} = useContext(AuthContext)
+    const {isAuth ,showHome , showAbout , showSkills , showContact} = useContext(AuthContext)
     
     return (
         <>
             <Header/>
             <main className="main">
-                {showHome && <Home/>}
-                {showAbout && <About/>}
-                {showSkills && <Skills/>}
-                {showContact && <Contact/>}
+                {isAuth && <Link to="/config"><Fix_button1 icon={"uil uil-setting"}/></Link>}
+                {(showHome || isAuth) && <Home/>}
+                {(showAbout || isAuth) && <About/>}
+                {(showSkills || isAuth) && <Skills/>}
+                {(showContact || isAuth) && <Contact/>}
                 <Footer/>
             </main>
         </>
