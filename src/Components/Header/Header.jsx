@@ -2,23 +2,24 @@ import "./header.css"
 import {Navigate} from "react-router-dom";
 import {useContext, useState} from "react";
 import {AuthContext} from "../../context/authContext.jsx";
-import {LogIn} from "../LogIn/LogIn.jsx";
 
 export function Header() {
     const [redirect, setRedirect] = useState(false)
-    
+    const [direction , setDirection] = useState('/logIn')
     const {isAuth , setIsAuth , showHome , showAbout , showSkills , showContact} = useContext(AuthContext)
     const handleLog = () => {
         if (isAuth){
             localStorage.removeItem("jwt");
             setIsAuth(false)
+            setDirection('/portfolio')
         }
         else {
             setRedirect(true)
+            setDirection('/logIn')
         }
     }
     if (redirect) {
-        return <Navigate to={'/logIn'}/>
+        return <Navigate to={direction}/>
     }
     return (
         <header className="header">
