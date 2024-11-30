@@ -1,15 +1,15 @@
 import "./enabler.css"
+import {OnOffToggle} from "../../On-Off-Toggle/On-Off-Toggle.jsx";
 export function Enabler({enabler_name , show , setShow}){
-    
+    const handleClick = () => {
+        setShow(!show)
+    }
     return(
         <div 
             className={`enabler_container`}
-            onClick={() => setShow(!show)}
         >
             <p>{enabler_name}</p>
-            <div className={`enabler_state_container enabler_${show ? 'on' : 'off'}`}>
-                <p>{show ? 'ON' : 'OFF'}</p>
-            </div>
+            <OnOffToggle onClickFunc={handleClick} state={show}/>
         </div>
     )
 }
