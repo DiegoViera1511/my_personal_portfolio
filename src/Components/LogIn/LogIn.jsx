@@ -14,27 +14,10 @@ export function LogIn() {
     const [showMessage , setShowMessage] = useState(false)
     const [textMessage , setTextMessage] = useState('')
     const [typeMessage , setTypeMessage] = useState('')
-    const {setIsAuth} = useContext(AuthContext)
+    const {setIsAuth , fetchToken} = useContext(AuthContext)
     
     useEffect(() => {
-        const fetchToken = async () => {
-            const token = localStorage.getItem('jwt')
-            console.log(token)
-            if (token) {
-                const response = await fetch(
-                    'https://backendprotfolio-production.up.railway.app/api/protected', {
-                    method: 'GET',
-                    headers: {
-                        Authorization: `Bearer ${token}`
-                    },
-                })
-                if (response.status === 200) {
-                    setRedirect(true)
-                    setIsAuth(true)
-                }
-            }
-        }
-        fetchToken().then()
+        fetchToken()
     }, [])
 
     const handleSubmit = async (e) => {
@@ -51,8 +34,8 @@ export function LogIn() {
             });
             console.log(`response status ${response.status}`)
             if (response.status === 200) {
-                const {token: tokenResponse} = await response.json()
-                localStorage.setItem('jwt', tokenResponse)
+                const token = await response.json()
+                localStorage.setItem('jwt', token)
                 setTextMessage("Success !")
                 setShowMessage(true)
                 setTypeMessage("success_message")
