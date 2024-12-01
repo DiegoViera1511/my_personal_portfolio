@@ -31,7 +31,7 @@ export function Header() {
                 <div className="nav_menu">
                     <ul className="nav_menu_list">
                         {
-                            showHome &&
+                            (showHome || isAuth) &&
                             <li className="nav_menu_list_item">
                                 <a href="#home" className="nav_menu_list_item_link">
                                     <i className="nav_menu_list_item_icon"></i> Home
@@ -40,7 +40,7 @@ export function Header() {
                         }
 
                         {
-                            showAbout &&
+                            (showAbout || isAuth) &&
                             <li className="nav_menu_list_item">
                                 <a href="#about" className="nav_menu_list_item_link">
                                     <i className="nav_menu_list_item_icon"></i> About
@@ -48,7 +48,7 @@ export function Header() {
                             </li>
                         }
                         {
-                            showSkills &&
+                            (showSkills || isAuth) &&
                             <li className="nav_menu_list_item">
                                 <a href="#skills" className="nav_menu_list_item_link">
                                     <i className="nav_menu_list_item_icon"></i> Skills
@@ -56,7 +56,7 @@ export function Header() {
                             </li>
                         }
                         {
-                            showContact &&
+                            (showContact || isAuth) &&
                             <li className="nav_menu_list_item">
                                 <a href="#contact" className="nav_menu_list_item_link">
                                     <i className="nav_menu_list_item_icon"></i> Contact

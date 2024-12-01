@@ -4,12 +4,24 @@ import {About} from "../About/About.jsx";
 import {Skills} from "../Skills/Skills.jsx";
 import {Contact} from "../Contact/Contact.jsx";
 import {Footer} from "../Footer/Footer.jsx";
-import {useContext} from "react";
+import {useContext, useEffect} from "react";
 import {AuthContext} from "../../context/authContext.jsx";
 import {Fix_button1} from "../Fix_Button1/Fix_button1.jsx";
 import {Link} from "react-router-dom";
+
 function Portfolio() {
-    const {isAuth ,showHome , showAbout , showSkills , showContact} = useContext(AuthContext)
+    const {
+        isAuth,
+        fetchToken,
+        showHome,
+        showAbout,
+        showSkills,
+        showContact
+    } = useContext(AuthContext)
+
+    useEffect(() => {
+        fetchToken()
+    }, []);
     
     return (
         <>

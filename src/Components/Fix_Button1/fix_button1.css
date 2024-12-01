@@ -12,6 +12,7 @@
     border-radius: 50%;
     border: grey solid 2px;
     transition: background-color 0.5s ease;
+    outline: none;
 }
 
 .fix_button1:hover{
